@@ -1,0 +1,5 @@
+allpairspy==2.5.0
+pytest==7.1.1
+pytest-xdist==2.5.0
+python-keystoneclient==4.4.0
+python-openstackclient==5.8.0
