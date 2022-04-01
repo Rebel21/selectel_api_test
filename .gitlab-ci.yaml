@@ -11,7 +11,7 @@ test-job:
     - export OS_REGION_NAME=$OS_REGION_NAME
     - export OS_USER_DOMAIN_NAME=$OS_USER_DOMAIN_NAME
     - export OS_USERNAME=$OS_USERNAME
-    - export OS_PASSWORD_INPUT=$OS_PASSWORD_INPUT
+    - export OS_PASSWORD=$OS_PASSWORD
     - pip install -r requirements.txt
   script:
       - py.test -v -l -n 5 ./tests/
