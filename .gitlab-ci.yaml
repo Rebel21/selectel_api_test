@@ -1,0 +1,17 @@
+stages:
+  - test
+
+test-job:
+  image: python:3.10
+  stage: test
+  before_script:
+    - export OS_PROJECT_DOMAIN_NAME=$OS_PROJECT_DOMAIN_NAME
+    - export OS_PROJECT_ID=$OS_PROJECT_ID
+    - export OS_TENANT_ID=$OS_TENANT_ID
+    - export OS_REGION_NAME=$OS_REGION_NAME
+    - export OS_USER_DOMAIN_NAME=$OS_USER_DOMAIN_NAME
+    - export OS_USERNAME=$OS_USERNAME
+    - export OS_PASSWORD_INPUT=$OS_PASSWORD_INPUT
+    - pip install -r requirements.txt
+  script:
+      - py.test -v -l -n 5 ./tests/
